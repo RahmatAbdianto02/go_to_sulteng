@@ -37,204 +37,266 @@ class _DetailGunungState extends State<DetailGunung> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBodyBehindAppBar: true,
       appBar: AppBar(
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back),
-          onPressed: () {
-            Navigator.pop(context);
-          },
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        leading: CircleAvatar(
+          backgroundColor: Colors.white.withOpacity(0.7),
+          child: IconButton(
+            icon: const Icon(Icons.arrow_back, color: Colors.black),
+            onPressed: () {
+              Navigator.pop(context);
+            },
+          ),
         ),
-        title: const Text('Detail Gunung'),
       ),
-      body: SafeArea(
-        child: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: <Widget>[
-              ClipRRect(
-                borderRadius: BorderRadius.circular(12),
-                child: Image.network(
+      body: Stack(
+        children: [
+          
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.45,
+            child: Stack(
+              fit: StackFit.expand,
+              children: [
+                Image.network(
                   'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/fb/3d/e8/photo1jpg.jpg?w=1800&h=1000&s=1',
                   fit: BoxFit.cover,
                 ),
-              ),
-              Container(
-                margin: const EdgeInsets.only(top: 16.0),
-                child: const Text(
-                  'Gunung Matantimali',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontSize: 30.0,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ),
-              Container(
-                margin: const EdgeInsets.symmetric(vertical: 16.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: <Widget>[
-                    Column(
-                      children: const <Widget>[
-                        Icon(Icons.calendar_month_outlined),
-                        SizedBox(height: 8.0),
-                        Text('Buka setiap hari')
+                Container(
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                      colors: [
+                        Colors.transparent,
+                        Colors.black.withOpacity(0.7),
                       ],
                     ),
-                    Column(
-                      children: const <Widget>[
-                        Icon(Icons.lock_clock_rounded),
-                        SizedBox(height: 8.0),
-                        Text('07:00 - 23:00')
-                      ],
-                    ),
-                    Column(
-                      children: const <Widget>[
-                        Icon(Icons.money),
-                        SizedBox(height: 8.0),
-                        Text('Rp 24.000')
-                      ],
-                    )
-                  ],
-                ),
-              ),
-              Container(
-                padding: const EdgeInsets.all(16.0),
-                child: const Text(
-                  'Gunung Matantimali adalah permata tersembunyi di Sulawesi Tengah.  Dengan letaknya yang strategis, gunung ini menawarkan pemandangan yang berbeda setiap saat.  Pada pagi hari, kamu bisa menyaksikan matahari terbit yang memukau.  Sedangkan pada sore hari, kamu bisa menikmati keindahan sunset yang romantis.  Selain itu, Gunung Matantimali juga menjadi habitat bagi berbagai jenis flora dan fauna endemik.  Bagi para pecinta alam, tempat ini adalah surga yang tak boleh dilewatkan.',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 16.0),
-                ),
-              ),
-              SizedBox(
-                height: 150,
-                child: ListView(
-                  scrollDirection: Axis.horizontal,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(4.0),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(20),
-                        child: Image.network(
-                          'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/90/58/de/img-20160814-075941-largejpg.jpg?w=1600&h=900&s=1',
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(4.0),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(20),
-                        child: Image.network(
-                          'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/f1/ae/37/edisi-jalan-jalan-akhir.jpg?w=1600&h=900&s=1',
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(4.0),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(20),
-                        child: Image.network(
-                          'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/08/9b/b3/bc/gunung-matantimali.jpg?w=1800&h=1000&s=1',
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(4.0),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(20),
-                        child: Image.network(
-                          'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/90/58/e1/img-20160814-074909-largejpg.jpg?w=1600&h=900&s=1',
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(4.0),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(20),
-                        child: Image.network(
-                          'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/06/d0/6d/fd/pemandangan-gunung-hijau.jpg?w=1800&h=-1&s=1',
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(4.0),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(20),
-                        child: Image.network(
-                          'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/06/d0/6e/26/view-dari-puncak.jpg?w=1800&h=-1&s=1',
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              const SizedBox(height: 20),
-              // Like/Dislike section
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  IconButton(
-                    icon: const Icon(Icons.thumb_up),
-                    onPressed: like,
                   ),
-                  Text('$likes', style: const TextStyle(fontSize: 20)),
-                  const SizedBox(width: 20),
-                  IconButton(
-                    icon: const Icon(Icons.thumb_down),
-                    onPressed: dislike,
-                  ),
-                  Text('$dislikes', style: const TextStyle(fontSize: 20)),
-                ],
-              ),
-              const SizedBox(height: 20),
-              // Comment section
-              Container(
-                padding: const EdgeInsets.all(16.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const Text(
-                      'Komentar',
-                      style: TextStyle(
-                        fontSize: 20.0,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    const SizedBox(height: 10),
-                    SizedBox(
-                      height: 150,
-                      child: ListView.builder(
-                        itemCount: comments.length,
-                        itemBuilder: (context, index) {
-                          return ListTile(
-                            title: Text(comments[index]),
-                          );
-                        },
-                      ),
-                    ),
-                    TextField(
-                      controller: commentController,
-                      decoration: const InputDecoration(
-                        labelText: 'Tulis komentar...',
-                        border: OutlineInputBorder(),
-                      ),
-                    ),
-                    const SizedBox(height: 8.0),
-                    ElevatedButton(
-                      onPressed: addComment,
-                      child: const Text('Kirim'),
-                    ),
-                  ],
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
+          SingleChildScrollView(
+            child: Column(
+              children: [
+                SizedBox(height: MediaQuery.of(context).size.height * 0.35),
+                Container(
+                  decoration: const BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(30),
+                      topRight: Radius.circular(30),
+                    ),
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(20),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                const Text(
+                                  'Gunung Matantimali',
+                                  style: TextStyle(
+                                    fontSize: 28,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                Row(
+                                  children: [
+                                    IconButton(
+                                      icon: Icon(Icons.thumb_up,
+                                          color: likes > 0
+                                              ? Colors.blue
+                                              : Colors.grey),
+                                      onPressed: like,
+                                    ),
+                                    Text('$likes'),
+                                  ],
+                                ),
+                              ],
+                            ),
+                            const SizedBox(height: 10),
+                            Row(
+                              children: [
+                                const Icon(Icons.location_on,
+                                    color: Colors.red, size: 20),
+                                const SizedBox(width: 5),
+                                const Text('Sulawesi Tengah, Indonesia'),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                      Container(
+                        padding: const EdgeInsets.all(20),
+                        decoration: BoxDecoration(
+                          color: Colors.grey[100],
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        margin: const EdgeInsets.symmetric(horizontal: 20),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            _buildInfoItem(
+                                Icons.height, '2.300 mdpl', 'Ketinggian'),
+                            _buildDivider(),
+                            _buildInfoItem(
+                                Icons.timer, '6-7 jam', 'Waktu Pendakian'),
+                            _buildDivider(),
+                            _buildInfoItem(
+                                Icons.landscape, 'Sedang', 'Tingkat Kesulitan'),
+                          ],
+                        ),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(20),
+                        child: Text(
+                          'Deskripsi',
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 20),
+                        child: Text(
+                          'Gunung Matantimali adalah permata tersembunyi di Sulawesi Tengah. Dengan letaknya yang strategis, gunung ini menawarkan pemandangan yang berbeda setiap saat. Pada pagi hari, kamu bisa menyaksikan matahari terbit yang memukau. Sedangkan pada sore hari, kamu bisa menikmati keindahan sunset yang romantis. Selain itu, Gunung Matantimali juga menjadi habitat bagi berbagai jenis flora dan fauna endemik.',
+                          style: TextStyle(
+                            height: 1.5,
+                            color: Colors.black87,
+                          ),
+                        ),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(20),
+                        child: Text(
+                          'Galeri Foto',
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 120,
+                        child: ListView(
+                          padding: const EdgeInsets.symmetric(horizontal: 20),
+                          scrollDirection: Axis.horizontal,
+                          children: [
+                            _buildGalleryImage(
+                                'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/90/58/de/img-20160814-075941-largejpg.jpg?w=1600&h=900&s=1'),
+                            _buildGalleryImage(
+                                'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/f1/ae/37/edisi-jalan-jalan-akhir.jpg?w=1600&h=900&s=1'),
+                            _buildGalleryImage(
+                                'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/08/9b/b3/bc/gunung-matantimali.jpg?w=1800&h=1000&s=1'),
+                          ],
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(20),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Text(
+                              'Komentar',
+                              style: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            const SizedBox(height: 15),
+                            ListView.builder(
+                              shrinkWrap: true,
+                              physics: const NeverScrollableScrollPhysics(),
+                              itemCount: comments.length,
+                              itemBuilder: (context, index) {
+                                return Card(
+                                  child: ListTile(
+                                    leading: const CircleAvatar(
+                                      child: Icon(Icons.person),
+                                    ),
+                                    title: Text(comments[index]),
+                                    subtitle: const Text('Pengunjung'),
+                                  ),
+                                );
+                              },
+                            ),
+                            const SizedBox(height: 15),
+                            TextField(
+                              controller: commentController,
+                              decoration: InputDecoration(
+                                hintText: 'Tulis komentar...',
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(15),
+                                ),
+                                suffixIcon: IconButton(
+                                  icon: const Icon(Icons.send),
+                                  onPressed: addComment,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildInfoItem(IconData icon, String value, String label) {
+    return Column(
+      children: [
+        Icon(icon, color: Colors.blue),
+        const SizedBox(height: 8),
+        Text(
+          value,
+          style: const TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 16,
+          ),
+        ),
+        Text(
+          label,
+          style: TextStyle(
+            color: Colors.grey[600],
+            fontSize: 12,
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget _buildDivider() {
+    return Container(
+      height: 40,
+      width: 1,
+      color: Colors.grey[300],
+    );
+  }
+
+  Widget _buildGalleryImage(String url) {
+    return Container(
+      width: 160,
+      margin: const EdgeInsets.only(right: 15),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(15),
+        image: DecorationImage(
+          image: NetworkImage(url),
+          fit: BoxFit.cover,
         ),
       ),
     );
