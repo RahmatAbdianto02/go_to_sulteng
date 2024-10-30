@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class DetailScreen extends StatefulWidget {
-  const DetailScreen({super.key});
+class DetailGunung extends StatefulWidget {
+  const DetailGunung({super.key});
 
   @override
-  State<DetailScreen> createState() => _DetailScreenState();
+  State<DetailGunung> createState() => _DetailGunungState();
 }
 
-class _DetailScreenState extends State<DetailScreen> {
+class _DetailGunungState extends State<DetailGunung> {
   List<String> comments = [];
   final TextEditingController commentController = TextEditingController();
   int likes = 0;
@@ -44,7 +44,7 @@ class _DetailScreenState extends State<DetailScreen> {
             Navigator.pop(context);
           },
         ),
-        title: const Text('Detail Pantai'),
+        title: const Text('Detail Gunung'),
       ),
       body: SafeArea(
         child: SingleChildScrollView(
@@ -54,14 +54,14 @@ class _DetailScreenState extends State<DetailScreen> {
               ClipRRect(
                 borderRadius: BorderRadius.circular(12),
                 child: Image.network(
-                  'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/af/19/19/menunggu-uang-koin.jpg?w=2000&h=-1&s=1',
+                  'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/fb/3d/e8/photo1jpg.jpg?w=1800&h=1000&s=1',
                   fit: BoxFit.cover,
                 ),
               ),
               Container(
                 margin: const EdgeInsets.only(top: 16.0),
                 child: const Text(
-                  'Pantai',
+                  'Gunung Matantimali',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 30.0,
@@ -78,7 +78,7 @@ class _DetailScreenState extends State<DetailScreen> {
                       children: const <Widget>[
                         Icon(Icons.calendar_month_outlined),
                         SizedBox(height: 8.0),
-                        Text('Bukan setiap hari')
+                        Text('Buka setiap hari')
                       ],
                     ),
                     Column(
@@ -101,7 +101,7 @@ class _DetailScreenState extends State<DetailScreen> {
               Container(
                 padding: const EdgeInsets.all(16.0),
                 child: const Text(
-                  'Sulawesi Tengah menyimpan sejuta pesona pantai yang memukau. Pasir putih lembut, air laut jernih kebiruan, dan deburan ombak yang menenangkan siap menyambutmu. Dari Pantai Talise yang ikonik di Palu hingga pantai-pantai tersembunyi di Kepulauan Togian, setiap sudut pantai di Sulteng menawarkan keindahan alam yang berbeda. Rasakan sensasi berenang di air laut yang hangat, bermain pasir bersama keluarga, atau sekadar menikmati pemandangan matahari terbenam yang memukau. Sulteng adalah surga bagi para pecinta pantai, tunggu apalagi? Yuk, rencanakan liburanmu sekarang!',
+                  'Gunung Matantimali adalah permata tersembunyi di Sulawesi Tengah.  Dengan letaknya yang strategis, gunung ini menawarkan pemandangan yang berbeda setiap saat.  Pada pagi hari, kamu bisa menyaksikan matahari terbit yang memukau.  Sedangkan pada sore hari, kamu bisa menikmati keindahan sunset yang romantis.  Selain itu, Gunung Matantimali juga menjadi habitat bagi berbagai jenis flora dan fauna endemik.  Bagi para pecinta alam, tempat ini adalah surga yang tak boleh dilewatkan.',
                   textAlign: TextAlign.center,
                   style: TextStyle(fontSize: 16.0),
                 ),
@@ -116,7 +116,7 @@ class _DetailScreenState extends State<DetailScreen> {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(20),
                         child: Image.network(
-                          'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/08/79/d6/32/photo0jpg.jpg?w=900&h=400&s=1',
+                          'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/90/58/de/img-20160814-075941-largejpg.jpg?w=1600&h=900&s=1',
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -126,7 +126,7 @@ class _DetailScreenState extends State<DetailScreen> {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(20),
                         child: Image.network(
-                          'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/67/82/f9/p-20190203-085332-largejpg.jpg?w=900&h=500&s=1',
+                          'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/f1/ae/37/edisi-jalan-jalan-akhir.jpg?w=1600&h=900&s=1',
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -136,7 +136,7 @@ class _DetailScreenState extends State<DetailScreen> {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(20),
                         child: Image.network(
-                          'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/67/82/f8/p-20190203-085246-largejpg.jpg?w=900&h=500&s=1',
+                          'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/08/9b/b3/bc/gunung-matantimali.jpg?w=1800&h=1000&s=1',
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -146,7 +146,7 @@ class _DetailScreenState extends State<DetailScreen> {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(20),
                         child: Image.network(
-                          'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/14/ac/53/08/view-of-the-coast-west.jpg?w=900&h=500&s=1',
+                          'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/90/58/e1/img-20160814-074909-largejpg.jpg?w=1600&h=900&s=1',
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -156,7 +156,7 @@ class _DetailScreenState extends State<DetailScreen> {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(20),
                         child: Image.network(
-                          'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/18/07/f0/91/img-20190623-wa0001-1.jpg?w=1400&h=-1&s=1',
+                          'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/06/d0/6d/fd/pemandangan-gunung-hijau.jpg?w=1800&h=-1&s=1',
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -166,11 +166,11 @@ class _DetailScreenState extends State<DetailScreen> {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(20),
                         child: Image.network(
-                          'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/67/81/a5/p-20190126-105724-largejpg.jpg?w=1000&h=600&s=1',
+                          'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/06/d0/6e/26/view-dari-puncak.jpg?w=1800&h=-1&s=1',
                           fit: BoxFit.cover,
                         ),
                       ),
-                    )
+                    ),
                   ],
                 ),
               ),

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class DetailScreen extends StatefulWidget {
-  const DetailScreen({super.key});
+class DetailTaman extends StatefulWidget {
+  const DetailTaman({super.key});
 
   @override
-  State<DetailScreen> createState() => _DetailScreenState();
+  State<DetailTaman> createState() => _DetailTamanState();
 }
 
-class _DetailScreenState extends State<DetailScreen> {
+class _DetailTamanState extends State<DetailTaman> {
   List<String> comments = [];
   final TextEditingController commentController = TextEditingController();
   int likes = 0;
@@ -44,7 +44,7 @@ class _DetailScreenState extends State<DetailScreen> {
             Navigator.pop(context);
           },
         ),
-        title: const Text('Detail Pantai'),
+        title: const Text('Detail Gunung'),
       ),
       body: SafeArea(
         child: SingleChildScrollView(
@@ -54,14 +54,14 @@ class _DetailScreenState extends State<DetailScreen> {
               ClipRRect(
                 borderRadius: BorderRadius.circular(12),
                 child: Image.network(
-                  'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/af/19/19/menunggu-uang-koin.jpg?w=2000&h=-1&s=1',
+                  'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/fb/f2/7d/caption.jpg?w=1400&h=-1&s=1',
                   fit: BoxFit.cover,
                 ),
               ),
               Container(
                 margin: const EdgeInsets.only(top: 16.0),
                 child: const Text(
-                  'Pantai',
+                  'Taman Nasional Lore Lindu',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 30.0,
@@ -78,7 +78,7 @@ class _DetailScreenState extends State<DetailScreen> {
                       children: const <Widget>[
                         Icon(Icons.calendar_month_outlined),
                         SizedBox(height: 8.0),
-                        Text('Bukan setiap hari')
+                        Text('Buka setiap hari')
                       ],
                     ),
                     Column(
@@ -90,9 +90,9 @@ class _DetailScreenState extends State<DetailScreen> {
                     ),
                     Column(
                       children: const <Widget>[
-                        Icon(Icons.money),
+                        Icon(Icons.money_sharp),
                         SizedBox(height: 8.0),
-                        Text('Rp 24.000')
+                        Text('Rp 50.000')
                       ],
                     )
                   ],
@@ -101,7 +101,7 @@ class _DetailScreenState extends State<DetailScreen> {
               Container(
                 padding: const EdgeInsets.all(16.0),
                 child: const Text(
-                  'Sulawesi Tengah menyimpan sejuta pesona pantai yang memukau. Pasir putih lembut, air laut jernih kebiruan, dan deburan ombak yang menenangkan siap menyambutmu. Dari Pantai Talise yang ikonik di Palu hingga pantai-pantai tersembunyi di Kepulauan Togian, setiap sudut pantai di Sulteng menawarkan keindahan alam yang berbeda. Rasakan sensasi berenang di air laut yang hangat, bermain pasir bersama keluarga, atau sekadar menikmati pemandangan matahari terbenam yang memukau. Sulteng adalah surga bagi para pecinta pantai, tunggu apalagi? Yuk, rencanakan liburanmu sekarang!',
+                  ' Di dalam kawasan ini terdapat berbagai jenis satwa liar dan spesis endemik Sulawesi Tengah peninggalan purbakala berupa patung-patung megalitikum yang diperkirakan berusia sekitar 5000-3500 tahun yang dibuat oleh bangsa Austronesia. Di sekitar kawasan ini juga terdapat perkampungan penduduk asli yang hidup bergantung pada alam yang ada di dalamnya. Kawasan ini dibuka bagi wisatawan untuk melakukan aktifitas trekking dan penelitian. Bagi anda yang ingin berkunjung ke sini kami selalu siap dan menyiapkan pemandu-pemandu khusus yang memiliki pengetahuan tentang arkeologis dan satwa liar.',
                   textAlign: TextAlign.center,
                   style: TextStyle(fontSize: 16.0),
                 ),
@@ -116,7 +116,7 @@ class _DetailScreenState extends State<DetailScreen> {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(20),
                         child: Image.network(
-                          'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/08/79/d6/32/photo0jpg.jpg?w=900&h=400&s=1',
+                          'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/fb/f2/7b/caption.jpg?w=1400&h=-1&s=1',
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -126,7 +126,7 @@ class _DetailScreenState extends State<DetailScreen> {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(20),
                         child: Image.network(
-                          'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/67/82/f9/p-20190203-085332-largejpg.jpg?w=900&h=500&s=1',
+                          'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/94/5d/14/2017-03-03-07-31-51-863.jpg?w=1600&h=-1&s=1',
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -136,7 +136,7 @@ class _DetailScreenState extends State<DetailScreen> {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(20),
                         child: Image.network(
-                          'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/67/82/f8/p-20190203-085246-largejpg.jpg?w=900&h=500&s=1',
+                          'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/ff/04/a3/sulawesi-scops-owl.jpg?w=1400&h=800&s=1',
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -146,31 +146,11 @@ class _DetailScreenState extends State<DetailScreen> {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(20),
                         child: Image.network(
-                          'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/14/ac/53/08/view-of-the-coast-west.jpg?w=900&h=500&s=1',
+                          'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/08/a0/d5/30/lore-lindu-national-park.jpg?w=1100&h=-1&s=1',
                           fit: BoxFit.cover,
                         ),
                       ),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(4.0),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(20),
-                        child: Image.network(
-                          'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/18/07/f0/91/img-20190623-wa0001-1.jpg?w=1400&h=-1&s=1',
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(4.0),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(20),
-                        child: Image.network(
-                          'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/67/81/a5/p-20190126-105724-largejpg.jpg?w=1000&h=600&s=1',
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    )
                   ],
                 ),
               ),
